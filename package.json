@@ -1,6 +1,6 @@
 {
   "name": "gemini-sandbox",
-  "version": "0.38.2-beta.1",
+  "version": "0.3802.0",
   "description": "Launch a Gemini sandbox environment via Docker",
   "main": "gemini.sh",
   "bin": {

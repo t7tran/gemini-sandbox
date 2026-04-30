@@ -3,6 +3,12 @@
 gemini_version=0.40.0
 mkdir -p $HOME/.gemini
 
+if [ -n "${GOOGLE_CLOUD_PROJECT}" ]; then
+  echo "Running in Gemini in a sandbox - cloud project set to ${GOOGLE_CLOUD_PROJECT}."
+else
+  echo "Running in Gemini in a sandbox - cloud project is not set."
+fi
+
 is_container() {
   [ -n "$KUBERNETES_PORT" ]
 }

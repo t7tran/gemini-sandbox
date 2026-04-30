@@ -8,6 +8,7 @@ is_container() {
 }
 
 if is_container; then
+  export SANDBOX=true
   run_in_docker() {
     "$@"
   }
@@ -25,6 +26,7 @@ else
                         -v $HOME/.gemini-sandbox:/home/node/.gemini-sandbox \
                         -v $HOME/.gemini:/home/node/.gemini \
                         -e GOOGLE_CLOUD_PROJECT \
+                        -e SANDBOX=true \
                         -e TERM=$TERM -e COLORTERM=$COLORTERM \
   )
 

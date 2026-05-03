@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-gemini_version=0.40.0
+gemini_version=0.40.1
 mkdir -p $HOME/.gemini
 
 if [ -n "${GOOGLE_CLOUD_PROJECT}" ]; then
